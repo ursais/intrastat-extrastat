@@ -7,11 +7,12 @@
 
 {
     "name": "Intrastat Product",
-    "version": "16.0.1.6.1",
+    "version": "17.0.1.0.0",
     "category": "Intrastat",
     "license": "AGPL-3",
     "summary": "Base module for Intrastat Product",
-    "author": "ACSONE SA/NV, brain-tec AG, Akretion, Noviat, Odoo Community Association (OCA)",
+    "author": "ACSONE SA/NV, brain-tec AG, Akretion, Noviat,"
+    " Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/intrastat-extrastat",
     "depends": [
         "intrastat_base",
