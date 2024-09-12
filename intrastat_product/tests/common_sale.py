@@ -31,14 +31,14 @@ class IntrastatSaleCommon(IntrastatProductCommon):
         for line in sale.order_line:
             expected_vals = self._get_expected_vals(line)
             comp_line = declaration.computation_line_ids.filtered(
-                lambda cline, line=line: cline.product_id == line.product_id
+                lambda cline, line: cline.product_id == line.product_id
             )
             self.assertTrue(
                 all(comp_line[key] == val for key, val in expected_vals.items())
             )
             if final:
                 decl_line = declaration.declaration_line_ids.filtered(
-                    lambda dline, cline=comp_line: cline in dline.computation_line_ids
+                    lambda comp_line, dline: comp_line in dline.computation_line_ids
                 )
                 self.assertTrue(
                     all(decl_line[key] == val for key, val in expected_vals.items())

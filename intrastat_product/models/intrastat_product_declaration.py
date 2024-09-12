@@ -601,7 +601,7 @@ class IntrastatProductDeclaration(models.Model):
                     "line_nbr": line_nbr,
                 }
                 inv_intrastat_line = invoice.intrastat_line_ids.filtered(
-                    lambda r, inv_line=inv_line: r.invoice_line_id == inv_line
+                    lambda r, inv_line: r.invoice_line_id == inv_line
                 )
 
                 if (
